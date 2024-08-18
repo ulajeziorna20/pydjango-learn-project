@@ -15,7 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from . import views
 
 # jedziemy z klasycznym MVC model view kontroler. Tutaj zaimportujemy teraz nasze funkcje obsługujace wstepnie widoki
 
@@ -27,4 +28,6 @@ urlpatterns = [
     # zauwaz ze nie musisz importować funkcji w obiektach zeby uzyc ich jak metody po kropce
     path('', views.homepage),
     path('about', views.about),
+    # tak dodajesz subadresy substrony
+    path('posts/', include('posts.urls')),
 ]
