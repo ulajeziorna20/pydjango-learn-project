@@ -45,3 +45,13 @@ a:hover {
   width: 100%;
   max-width: 800px;
 }
+
+.alert.alert-danger {
+  color: red;
+  font-size: 30px;
+}
+
+.errorlist li {
+  color: red;
+  font-size: 30px;
+}

@@ -33,6 +33,7 @@ urlpatterns = [
     path('about', views.about),
     # tak dodajesz subadresy substrony
     path('posts/', include('posts.urls')),
+    path('users/', include('users.urls')),
 ]
 
 
