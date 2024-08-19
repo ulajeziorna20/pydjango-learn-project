@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+  <h1>Log in now!</h1>
+  <form action="/users/login/" method="post" class="form-with-validation">
+    
+    {% csrf_token %}
+    {{form}}
+
+    {% comment %}
+    <div class="alert alert-danger my-3 p-1" role="alert">
+      {{ form.errors|striptags}}  <!-- Błędy ogólne -->
+    </div>
+    {% endcomment %}
+
+    <button class="form-submit">Submit</button>
+  </form>
+{% endblock %}

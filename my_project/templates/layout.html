@@ -18,13 +18,16 @@
   <nav>
 
     <a href="/">
-      <span role="img" aria-label="Home">Home icon</span>
+      <span role="img" aria-label="Home">🏠</span>
     </a> |
-    <a href="/about">About</a> |
+    <a href="/about">❓</a> |
     <!-- ten zapis bedzie dobry jesli w views nadasz atrybut name dla url'a -->
      <!-- dodatkowo mozesz uczynic url bardziej specyficznym patrz urls.py linia 5 -->
-    <a href="{% url 'posts:list' %}">Posts</a> |
-    <a href="{% url 'users:register' %}">Rejestracja</a>
+    <a href="{% url 'posts:list' %}">📑</a> |
+    <a href="{% url 'users:register' %}">🚀</a> |
+    <a href="{% url 'users:login' %}">
+      <span role="img" aria-label="Login" title="Login">🔐</span>
+    </a> 
     <!-- <a href="/posts">Posts</a> | -->
   </nav>
 

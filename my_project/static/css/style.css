@@ -21,8 +21,8 @@ nav {
 }
 
 main {
-  flex-grow: 1;
-  display: grid;
+  /* flex-grow: 1;
+  display: grid; */
   place-content: center;
 }
 
@@ -54,4 +54,9 @@ a:hover {
 .errorlist li {
   color: red;
   font-size: 30px;
+}
+
+.form-with-validation input {
+  display: block;
+  width: 100%;
 }
