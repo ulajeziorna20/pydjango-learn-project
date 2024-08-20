@@ -11,6 +11,12 @@
     {% csrf_token %}
     {{form}}
 
+    {% if request.GET.next  %}
+      <input type="hidden" name="next" value="{{request.GET.next}}" />
+
+    {% endif %}
+
+
     {% comment %}
     <div class="alert alert-danger my-3 p-1" role="alert">
       {{ form.errors|striptags}}  <!-- Błędy ogólne -->

@@ -4,6 +4,9 @@ from .models import Post
 
 # Create your views here.
 
+# protector
+from django.contrib.auth.decorators import login_required
+
 def posts_list(request):
 
 # tutaj pobierasz wszystkie posty
@@ -19,3 +22,8 @@ def post_page(request, slug):
     return render(request, 'posts/post_page.html', {'post': post})
 
   # return HttpResponse(slug)
+
+
+@login_required(login_url="/users/login/")
+def posts_new(request):
+  return render(request, 'posts/post_new.html')
